@@ -21,8 +21,9 @@ const main = () => {
   console.log('Answer "yes" if number even otherwise answer "no".\n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
+  const maxSteps = 3;
 
-  for (let n = 0; n < 3; n += 1) {
+  for (let n = 0; n < maxSteps; n += 1) {
     if (ask() === false) {
       console.log(`Let's try again, ${userName}!\n`);
       return;
