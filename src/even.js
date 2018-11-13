@@ -1,17 +1,19 @@
 import readlineSync from 'readline-sync';
 
-const ask = (userName) => {
-  const num = Math.floor(Math.random() * 100) + 1;
-  console.log(`Question: ${num}`);
-  const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
+const isEven = num => num % 2 === 0;
+const getRandomNum = () => Math.floor(Math.random() * 100) + 1;
+
+const ask = () => {
+  const question = getRandomNum();
+  console.log(`Question: ${question}`);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   const answer = readlineSync.question('Your answer: ').toLowerCase();
   if (answer === correctAnswer) {
     console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-    console.log(`Let's try again, ${userName}!`);
   }
-  return answer === correctAnswer ? 1 : 0;
+  return answer === correctAnswer;
 };
 
 const main = () => {
@@ -20,13 +22,13 @@ const main = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  let correctAnswers = 0;
   for (let n = 0; n < 3; n += 1) {
-    correctAnswers += ask(userName);
+    if (ask() === false) {
+      console.log(`Let's try again, ${userName}!\n`);
+      return;
+    }
   }
-  if (correctAnswers === 3) {
-    console.log(`Congratulations, ${userName}!\n`);
-  }
+  console.log(`Congratulations, ${userName}!\n`);
 };
 
 export default main;
