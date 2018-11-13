@@ -1,4 +1,5 @@
-# project-lvl1-s380
+# Brain Games
+project-lvl1-s380
 
 
 <a href="https://codeclimate.com/github/ekiryutin/project-lvl1-s380/maintainability">
@@ -8,3 +9,12 @@
 <a href="https://travis-ci.org/ekiryutin/project-lvl1-s380">
   <img src="https://travis-ci.org/ekiryutin/project-lvl1-s380.svg?branch=master" />
 </a>
+
+## Install
+```npm install -g brain-games-kir```
+
+## Usage
+
+| Run    | Description |
+| -----------------   | ----------- |
+| ```brain-even```    | Number is even or odd? |
