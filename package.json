@@ -1,6 +1,6 @@
 {
   "name": "brain-games-kir",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "Brain Games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
