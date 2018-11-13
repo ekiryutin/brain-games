@@ -18,3 +18,4 @@ project-lvl1-s380
 | Run    | Description |
 | -----------------   | ----------- |
 | ```brain-even```    | Number is even or odd? |
+| ```brain-calc```    | What is the result of the expression? |

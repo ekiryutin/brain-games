@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import main from '../even';
+import main from '../games/even';
 
 main();
