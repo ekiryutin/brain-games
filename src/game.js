@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr, toString } from 'hexlet-pairs';
-
+import { car, cdr } from 'hexlet-pairs';
 
 const getQuestion = info => car(info);
 
