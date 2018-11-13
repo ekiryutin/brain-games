@@ -1,8 +1,7 @@
 {
   "name": "brain-games-kir",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Brain Games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -15,6 +14,10 @@
     "prepublishOnly": "npm run build"
   },
   "author": "kiryutin",
+  "keywords": [
+    "hexlet",
+    "braingames"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
