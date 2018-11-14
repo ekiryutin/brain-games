@@ -5,7 +5,10 @@ const getQuestion = info => car(info);
 
 const getAnswer = info => cdr(info);
 
-const playRound = (gameData) => {
+const maxSteps = 3;
+
+const playRound = (generateGameData) => {
+  const gameData = generateGameData();
   const question = getQuestion(gameData);
   const correctAnswer = getAnswer(gameData);
 
@@ -28,9 +31,8 @@ const runGame = (gameDescription, generateGameData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  const maxSteps = 3;
   for (let n = 0; n < maxSteps; n += 1) {
-    if (!playRound(generateGameData())) {
+    if (playRound(generateGameData) === false) {
       console.log(`Let's try again, ${userName}!\n`);
       return;
     }

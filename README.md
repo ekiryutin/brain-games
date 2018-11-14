@@ -11,7 +11,7 @@ project-lvl1-s380
 
 ## Usage
 
-| Run               | Description            |  Demo          |
+| Command           | Description            |  Demo          |
 | ----------------- | -----------            | -------------- |
 | ```brain-even```  | Number is even or odd? | [View](https://asciinema.org/a/zwZSm9pSabDN60cKOPJ9PmzS1) | 
 | ```brain-calc```  | What is the result of the expression? | [View](https://asciinema.org/a/0dbljKcG2dZJEJwiDLza49Jra)  |
