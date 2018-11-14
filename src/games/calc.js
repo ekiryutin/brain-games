@@ -1,11 +1,10 @@
 import { cons } from 'hexlet-pairs';
+import { getRandomNum } from '../utils';
 import runGame from '../game';
 
-const getRandomNum = (min, max) => Math.round(Math.random() * (max - min) + min);
+const gameDescription = 'What is the result of the expression?';
 
-const gameDescription = () => 'What is the result of the expression?\n';
-
-const nextRound = () => {
+const generateGameData = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);
   const sign = getRandomNum(1, 3);
@@ -30,12 +29,4 @@ const nextRound = () => {
   return cons(question, String(answer));
 };
 
-// const getQuestion = info => car(info);
-
-// const getAnswer = info => cdr(info);
-
-const main = () => {
-  runGame(gameDescription, nextRound);
-};
-
-export default main;
+export default () => runGame(gameDescription, generateGameData);

@@ -5,33 +5,32 @@ const getQuestion = info => car(info);
 
 const getAnswer = info => cdr(info);
 
-
-const ask = (nextRound) => {
-  const roundInfo = nextRound();
-  const question = getQuestion(roundInfo);
-  const correctAnswer = getAnswer(roundInfo);
+const playRound = (gameData) => {
+  const question = getQuestion(gameData);
+  const correctAnswer = getAnswer(gameData);
 
   console.log(`Question: ${question}`);
 
   const answer = readlineSync.question('Your answer: ').toLowerCase();
-  if (answer === correctAnswer) {
+  const isCorrect = answer === correctAnswer;
+  if (isCorrect) {
     console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   }
-  return answer === correctAnswer;
+  return isCorrect;
 };
 
-const runGame = (gameDescription, nextRound) => {
+const runGame = (gameDescription, generateGameData) => {
   console.log('\nWelcome to the Brain Games!'); // showWelcome
-  console.log(gameDescription());
+  console.log(gameDescription);
 
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
   const maxSteps = 3;
   for (let n = 0; n < maxSteps; n += 1) {
-    if (ask(nextRound) === false) {
+    if (!playRound(generateGameData())) {
       console.log(`Let's try again, ${userName}!\n`);
       return;
     }
