@@ -15,3 +15,4 @@ project-lvl1-s380
 | ----------------- | -----------            | -------------- |
 | ```brain-even```  | Number is even or odd? | [View](https://asciinema.org/a/zwZSm9pSabDN60cKOPJ9PmzS1) | 
 | ```brain-calc```  | What is the result of the expression? | [View](https://asciinema.org/a/0dbljKcG2dZJEJwiDLza49Jra)  |
+| ```brain-gcd```   | Find the greatest common divisor of given numbers | [View](https://asciinema.org/a/lST2kPwi4wUdD76s6mRIQXwkS)  |
