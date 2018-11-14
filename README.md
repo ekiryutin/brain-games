@@ -17,3 +17,4 @@ project-lvl1-s380
 | ```brain-calc```  | What is the result of the expression? | [View](https://asciinema.org/a/0dbljKcG2dZJEJwiDLza49Jra)  |
 | ```brain-gcd```   | Find the greatest common divisor of given numbers | [View](https://asciinema.org/a/lST2kPwi4wUdD76s6mRIQXwkS)  |
 | ```brain-progression``` | What number is missing in the progression? | [View](https://asciinema.org/a/35UfSluMU9qLd1UKXz937rOYt)  |
+| ```brain-prime```   | Number is prime? | [View](https://asciinema.org/a/mKjzbgg6Tv9RTigofELa9EylT)  |
